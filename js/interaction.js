@@ -1,11 +1,23 @@
-function showList(){
-    showCheckList = !showCheckList;
+function showList(showCheckList,checkList){
     if (showCheckList){
-         let checkList = document.getElementsByClassName('checkList');
-         checkList.style.display = true;
+         checkList.style.display = "block";
     }
+    if(!showCheckList){
+        checkList.style.display = "none";
+    }
+    showCheckList = !showCheckList;
+    return showCheckList;
 }
-
-var showCheckList = false;
-var myList = document.getElementsByClassName('myList');
-myList.addEventListener('click',showList());
+window.onload=function(){
+    var showCheckList = true;
+    var myList = document.getElementById("myList");
+    var checkList = document.getElementById('checkList');
+    myList.onclick = function(){
+        showCheckList = showList(showCheckList,checkList);
+    };
+    checkList.onclick = function(){
+        showCheckList = showList(showCheckList,checkList);
+    }
+    //myList.addEventListener('click',showList(showCheckList));
+    
+  }
