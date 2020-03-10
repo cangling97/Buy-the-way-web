@@ -9,8 +9,7 @@ function showList(showCheckList,checkList){
     return showCheckList;
 }
 
-window.onload=function(){
-    
+window.addEventListener('load', function(){
     var showCheckList = true;
     var myList = document.getElementById("myList");
     var checkList = document.getElementById('checkList');
@@ -60,7 +59,8 @@ window.onload=function(){
         //add to list
         juiceToCart.style.display = "none";
         juiceAdded.style.display = "block";
-        juiceInCart=true;
+        quantity = juiceQuantity.toString();
+        localStorage.setItem("Juice",juice.toString());
     }
 
 
@@ -88,6 +88,7 @@ window.onload=function(){
         sodaToCart.style.display = "none";
         sodaAdded.style.display = "block";
         sodaInCart=true;
+        localStorage.setItem("Soda",soda.toString());
     }
     
-  }
+  });

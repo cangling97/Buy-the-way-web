@@ -1,4 +1,4 @@
-function database(){
+function createData(){
     var data = {};
     let apple1 = ("metro","food",0.99,3);
     let apple2 = ("foodBasic","food",0.99,5);
@@ -22,6 +22,7 @@ function database(){
     data["beef"] = [beef1,beef2,beef3];
     return data;
 }
+
 
 
 

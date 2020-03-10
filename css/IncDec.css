@@ -1,0 +1,38 @@
+#plus1{
+    border:1px solid black;
+    z-index: 5;
+    position:absolute;
+    top:143px;
+    left:130px;
+    width:15px;
+    height:15px;
+  }
+
+  #minus1{
+    border:1px solid black;
+    z-index: 5;
+    position:absolute;
+    top:143px;
+    left:180px;
+    width:15px;
+    height:15px;
+  }
+  #plus2{
+    border:1px solid black;
+    z-index: 5;
+    position:absolute;
+    top:183px;
+    left:130px;
+    width:15px;
+    height:15px;
+  }
+
+  #minus2{
+    border:1px solid black;
+    z-index: 5;
+    position:absolute;
+    top:183px;
+    left:180px;
+    width:15px;
+    height:15px;
+  }
