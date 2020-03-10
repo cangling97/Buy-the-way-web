@@ -1,25 +1,4 @@
-function showList(showCheckList,checkList){
-    if (showCheckList){
-         checkList.style.display = "block";
-    }
-    if(!showCheckList){
-        checkList.style.display = "none";
-    }
-    showCheckList = !showCheckList;
-    return showCheckList;
-}
-
-window.onload=function(){
-    
-    var showCheckList = true;
-    var myList = document.getElementById("myList");
-    var checkList = document.getElementById('checkList');
-    myList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    };
-    checkList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    }
+window.addEventListener('load', function(){
 
     var SalamiInCart = false;
     var HamInCart = false;
@@ -75,6 +54,7 @@ window.onload=function(){
         TurkeyToCart.style.display = "none";
         TurkeyAdded.style.display = "block";
         TurkeyInCart=true;
+        localStorage.setItem("Turkey",Turkey.toString());
     }
 
 
@@ -102,6 +82,7 @@ window.onload=function(){
         SausageToCart.style.display = "none";
         SausageAdded.style.display = "block";
         SausageInCart=true;
+        localStorage.setItem("Sausage",Sausage.toString());
     }
     
     
@@ -129,6 +110,7 @@ window.onload=function(){
         SalamiToCart.style.display = "none";
         SalamiAdded.style.display = "block";
         SalamiInCart=true;
+        localStorage.setItem("Salami",Salami.toString());
     }
 
 
@@ -156,6 +138,7 @@ window.onload=function(){
         HamToCart.style.display = "none";
         HamAdded.style.display = "block";
         HamInCart=true;
+        localStorage.setItem("Ham",Ham.toString());
     }
     
-  }
+  });

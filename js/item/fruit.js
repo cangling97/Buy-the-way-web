@@ -1,26 +1,5 @@
-function showList(showCheckList,checkList){
-    if (showCheckList){
-         checkList.style.display = "block";
-    }
-    if(!showCheckList){
-        checkList.style.display = "none";
-    }
-    showCheckList = !showCheckList;
-    return showCheckList;
-}
 
-window.onload=function(){
-    
-    var showCheckList = true;
-    var myList = document.getElementById("myList");
-    var checkList = document.getElementById('checkList');
-    myList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    };
-    checkList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    }
-
+window.addEventListener('load', function(){
     var AppleInCart = false;
     var BananaInCart = false;
     var GrapeInCart = false;
@@ -68,6 +47,7 @@ window.onload=function(){
         AppleToCart.style.display = "none";
         AppleAdded.style.display = "block";
         AppleInCart=true;
+        localStorage.setItem("Apple",Apple.toString());
     }
 
 
@@ -95,6 +75,7 @@ window.onload=function(){
         BananaToCart.style.display = "none";
         BananaAdded.style.display = "block";
         BananaInCart=true;
+        localStorage.setItem("Banana",Banana.toString());
     }
 
     GrapeInc.onclick = function(){     
@@ -121,6 +102,7 @@ window.onload=function(){
         GrapeToCart.style.display = "none";
         GrapeAdded.style.display = "block";
         GrapeInCart=true;
+        localStorage.setItem("Grape",Grape.toString());
     }
     
-  }
+  });

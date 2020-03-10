@@ -1,11 +1,3 @@
-function showList(showCheckList,checkList){
-    if (showCheckList){
-         checkList.style.display = "block";
-         checkList.style.pointerEvents = "auto";
-    }
-    return !showCheckList;
-}
-
 function enterOption(){
     if (localStorage.length == 0){
         alert("Please Add Something to Your Cart!")
@@ -17,34 +9,6 @@ function enterOption(){
         window.location = "option.html";
     }
 }
-
-function emptyList(){
-    localStorage.clear();
-    console.log(1);
-    window.location = "index.html";
-}
-
-function toSubmit(){
-    var x = document.getElementById("SearchBox").value;
-    x = x.toLowerCase();
-    if (x == "turkey"){
-        document.newForm.action = "turkey.html";
-    }else if(x == "cookie"){
-        document.newForm.action = "cookie.html";
-    }else{
-        alert("Nothing Found");
-    }
-}
-
-function closeList(showCheckList,checkList){
-    if(!showCheckList){
-        //localStorage.clear();
-        checkList.style.display = "none";
-        checkList.style.pointerEvents = "none";
-    }
-    return !showCheckList;
-}
-
 
 function createContentList(){
     var OneContent = document.getElementById("1");
@@ -102,59 +66,54 @@ function display(localStorage,contentList,getListId,quanList){
       }
 }
 
-function remove(index,contentList,getListId,quanList){
+function remove(index){
     localStorage.removeItem(localStorage.key(index));
-    location.reload();
     display(localStorage,contentList,getListId,quanList);
+    location.reload();
 }
 
 
+
 window.addEventListener('load', function(){
-    var showCheckList = true;
-    var myList = document.getElementById("myList");
-    var checkList = document.getElementById('checkList');
-    var close = document.getElementById("close");
-    
-    var contentList = createContentList();
-    var getListId = createIdList();
-    var quanList = createContentList();
-     var de1 = document.getElementById("delete1");
-     var de2 = document.getElementById("delete2");   
-    //  var de3 = document.getElementById("delete3");
-    //  var de4 = document.getElementById("delete4");
-    //  var de5 = document.getElementById("delete5");
-    //  var de6 = document.getElementById("delete6");
-    //  var de7 = document.getElementById("delete7");
-    //  var de8 = document.getElementById("delete8");
-    //  var de9 = document.getElementById("delete9");
-    //  var de10 = document.getElementById("delete10");
-     de1.onclick = function(contentList,getListId,quanList){
-        remove(0,contentList,getListId,quanList);
-     }
-     de2.onclick = function(contentList,getListId,quanList){
-        remove(1,contentList,getListId,quanList);
-     }
 
-
-
+    var listIcon = document.getElementById("list");
+    var de1 = document.getElementById("delete1");
+    var de2 = document.getElementById("delete2");   
+   //  var de3 = document.getElementById("delete3");
+   //  var de4 = document.getElementById("delete4");
+   //  var de5 = document.getElementById("delete5");
+   //  var de6 = document.getElementById("delete6");
+   //  var de7 = document.getElementById("delete7");
+   //  var de8 = document.getElementById("delete8");
+   //  var de9 = document.getElementById("delete9");
+   //  var de10 = document.getElementById("delete10");
     de1.onclick = function(){
-        remove(1,contentList,getListId);
-     }
-
-    this.window.onclick = function(){
-        display(localStorage,contentList,getListId,quanList);
-    };
-
-    myList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    };
+       remove(0,contentList,getListId,quanList);
+    }
+    de2.onclick = function(){
+       remove(1,contentList,getListId,quanList);
+    }
 
 
 
-    close.onclick = function(){
-        showCheckList = closeList(showCheckList,checkList);
-    };
+   
+   var contentList = createContentList();
+   var getListId = createIdList();
+   var quanList = createContentList();
 
-    //myList.addEventListener('click',showList(showCheckList));
-    
-  });
+   if (localStorage.length != 0){
+    listIcon.style.display="none";
+    display(localStorage,contentList,getListId,quanList);
+}
+   de1.onclick = function(){
+       remove(1,contentList,getListId);
+    }
+
+   this.window.onclick = function(){
+       display(localStorage,contentList,getListId,quanList);
+   };
+
+
+   //myList.addEventListener('click',showList(showCheckList));
+   
+ });

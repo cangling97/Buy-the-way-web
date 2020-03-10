@@ -1,25 +1,7 @@
-function showList(showCheckList,checkList){
-    if (showCheckList){
-         checkList.style.display = "block";
-    }
-    if(!showCheckList){
-        checkList.style.display = "none";
-    }
-    showCheckList = !showCheckList;
-    return showCheckList;
-}
 
-window.onload=function(){
+window.addEventListener('load', function(){
     
-    var showCheckList = true;
-    var myList = document.getElementById("myList");
-    var checkList = document.getElementById('checkList');
-    myList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    };
-    checkList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    }
+
 
     var CrackerInCart = false;
     var ChipInCart = false;
@@ -68,6 +50,7 @@ window.onload=function(){
         CrackerToCart.style.display = "none";
         CrackerAdded.style.display = "block";
         CrackerInCart=true;
+        localStorage.setItem("Cracker",Cracker.toString());
     }
 
 
@@ -95,6 +78,7 @@ window.onload=function(){
         ChipToCart.style.display = "none";
         ChipAdded.style.display = "block";
         ChipInCart=true;
+        localStorage.setItem("Chip",Chip.toString());
     }
 
     CookieInc.onclick = function(){     
@@ -121,6 +105,7 @@ window.onload=function(){
         CookieToCart.style.display = "none";
         CookieAdded.style.display = "block";
         CookieInCart=true;
+        localStorage.setItem("Cookie",Cookie.toString());
     }
     
-  }
+  });

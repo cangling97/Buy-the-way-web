@@ -1,25 +1,6 @@
-function showList(showCheckList,checkList){
-    if (showCheckList){
-         checkList.style.display = "block";
-    }
-    if(!showCheckList){
-        checkList.style.display = "none";
-    }
-    showCheckList = !showCheckList;
-    return showCheckList;
-}
 
-window.onload=function(){
+window.addEventListener('load', function(){
     
-    var showCheckList = true;
-    var myList = document.getElementById("myList");
-    var checkList = document.getElementById('checkList');
-    myList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    };
-    checkList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    }
 
     var CheeseInCart = false;
     var MilkInCart = false;
@@ -61,6 +42,7 @@ window.onload=function(){
         CheeseToCart.style.display = "none";
         CheeseAdded.style.display = "block";
         CheeseInCart=true;
+        localStorage.setItem("Cheese",Cheese.toString());
     }
 
 
@@ -88,6 +70,7 @@ window.onload=function(){
         MilkToCart.style.display = "none";
         MilkAdded.style.display = "block";
         MilkInCart=true;
+        localStorage.setItem("Milk",Milk.toString());
     }
     
-  }
+  });

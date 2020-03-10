@@ -1,25 +1,6 @@
-function showList(showCheckList,checkList){
-    if (showCheckList){
-         checkList.style.display = "block";
-    }
-    if(!showCheckList){
-        checkList.style.display = "none";
-    }
-    showCheckList = !showCheckList;
-    return showCheckList;
-}
 
-window.onload=function(){
-    
-    var showCheckList = true;
-    var myList = document.getElementById("myList");
-    var checkList = document.getElementById('checkList');
-    myList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    };
-    checkList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    }
+
+window.addEventListener('load', function(){
 
     var BroccoliInCart = false;
     var CucumberInCart = false;
@@ -61,6 +42,7 @@ window.onload=function(){
         BroccoliToCart.style.display = "none";
         BroccoliAdded.style.display = "block";
         BroccoliInCart=true;
+        localStorage.setItem("Broccoli",Broccoli.toString());
     }
 
 
@@ -88,6 +70,7 @@ window.onload=function(){
         CucumberToCart.style.display = "none";
         CucumberAdded.style.display = "block";
         CucumberInCart=true;
+        localStorage.setItem("Cucumber",Cucumber.toString());
     }
     
-  }
+  });

@@ -1,24 +1,6 @@
-function showList(showCheckList,checkList){
-    if (showCheckList){
-         checkList.style.display = "block";
-    }
-    if(!showCheckList){
-        checkList.style.display = "none";
-    }
-    showCheckList = !showCheckList;
-    return showCheckList;
-}
 
 window.addEventListener('load', function(){
-    var showCheckList = true;
-    var myList = document.getElementById("myList");
-    var checkList = document.getElementById('checkList');
-    myList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    };
-    checkList.onclick = function(){
-        showCheckList = showList(showCheckList,checkList);
-    }
+
 
     var juiceInCart = false;
     var sodaInCart = false;
@@ -59,7 +41,7 @@ window.addEventListener('load', function(){
         //add to list
         juiceToCart.style.display = "none";
         juiceAdded.style.display = "block";
-        quantity = juiceQuantity.toString();
+        juiceInCart = true;
         localStorage.setItem("Juice",juice.toString());
     }
 

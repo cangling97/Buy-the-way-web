@@ -5,6 +5,7 @@
         <meta name="author" content="Hanbo Yu"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/style.css"> 
+        <script src="js/interaction.js"></script>
         <style>
             /* Set the size of the div element that contains the map */
            #map {
@@ -15,7 +16,7 @@
     </head>
     <body>
         <div>
-            <a href="index.html"><img id="leftArrow" src="img/leftArrow.jpg"></a>
+            <a href="option.html"><img id="leftArrow" src="img/leftArrow.jpg"></a>
             <p>&nbsp;&nbsp;Destination</p>
         </div>
     <div class="Navigation">
@@ -56,11 +57,12 @@
             </script>
             <div class="Location">
                 <div class="Costco">
-                    <p>Costco EST.7KM</p>
+                    <p>Step 1:Costco EST.7KM</p>
                     <a href="http://maps.google.com/maps/dir/current+location/Costco+St,+Kingston" class="mapbutton">
                         Open on GoogleMap</a>
                 </div>
             </div>
     </div>
+    <button id="back" type="button" onclick="emptyList()">Back to Main Page</button>
 </body>
 </html>
