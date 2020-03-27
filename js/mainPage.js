@@ -57,9 +57,13 @@ function createQuanlityList(){
 
 
 function display(localStorage,contentList,getListId,quanList){
+    var space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
     for (var i = localStorage.length - 1; i >= 0; i--) {
         data = localStorage.getItem(localStorage.key(i));
-        contentList[i].innerHTML = localStorage.key(i) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + data;
+        if (localStorage.key(i) == "Turkey"){
+            space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
+        }
+        contentList[i].innerHTML = localStorage.key(i) + space + data;
         //quanList[i].innerHTML = localStorage.key(i);
         console.log(localStorage.key(i));
         getListId[i].style.display = "block";

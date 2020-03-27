@@ -103,8 +103,10 @@ function display(localStorage,contentList,getListId,quanList){
 }
 
 function remove(index,contentList,getListId,quanList){
-    localStorage.removeItem(localStorage.key(index));
-    location.reload();
+    let deleted = localStorage.length - 1;
+    deleted = deleted = index;
+    localStorage.removeItem(localStorage.key(deleted));
+    //location.reload();
     display(localStorage,contentList,getListId,quanList);
 }
 
