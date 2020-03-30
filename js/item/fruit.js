@@ -21,6 +21,26 @@ window.addEventListener('load', function(){
     var GrapeQuantity = document.getElementById('quantityGrape');
     var GrapeToCart = document.getElementById('addGrapeToCart');
     var GrapeAdded = document.getElementById('GrapeAdded');
+
+    if (localStorage.length != 0){
+        for (var i = localStorage.length - 1; i >= 0; i--) {
+            if (localStorage.key(i) == "Grape"){
+                GrapeInCart = true;
+                GrapeToCart.style.display = "none";
+                GrapeAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Banana"){
+                BananaInCart = true;
+                BananaToCart.style.display = "none";
+                BananaAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Apple"){
+                AppleInCart = true;
+                AppleToCart.style.display = "none";
+                AppleAdded.style.display = "block";
+            }
+        }
+    }
     
     
     AppleInc.onclick = function(){     

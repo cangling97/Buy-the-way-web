@@ -25,6 +25,25 @@ window.addEventListener('load', function(){
     var CookieToCart = document.getElementById('addCookieToCart');
     var CookieAdded = document.getElementById('CookieAdded');
     
+    if (localStorage.length != 0){
+        for (var i = localStorage.length - 1; i >= 0; i--) {
+            if (localStorage.key(i) == "Cracker"){
+                CrackerInCart = true;
+                CrackerToCart.style.display = "none";
+                CrackerAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Cookie"){
+                CookieInCart = true;
+                CookieToCart.style.display = "none";
+                CookieAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Chip"){
+                ChipInCart = true;
+                ChipToCart.style.display = "none";
+                ChipAdded.style.display = "block";
+            }
+        }
+    }
     
     CrackerInc.onclick = function(){     
         if (!CrackerInCart){

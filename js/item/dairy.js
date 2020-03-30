@@ -17,7 +17,21 @@ window.addEventListener('load', function(){
     var MilkToCart = document.getElementById('addMilkToCart');
     var MilkAdded = document.getElementById('MilkAdded');
     
-    
+    if (localStorage.length != 0){
+        for (var i = localStorage.length - 1; i >= 0; i--) {
+            if (localStorage.key(i) == "Cheese"){
+                CheeseInCart = true;
+                CheeseToCart.style.display = "none";
+                CheeseAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Milk"){
+                MilkInCart = true;
+                MilkToCart.style.display = "none";
+                MilkAdded.style.display = "block";
+            }
+        }
+    }
+
     CheeseInc.onclick = function(){     
         if (!CheeseInCart){
             Cheese++;

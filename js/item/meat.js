@@ -28,6 +28,32 @@ window.addEventListener('load', function(){
     var SausageQuantity = document.getElementById('quantitySausage');
     var SausageToCart = document.getElementById('addSausageToCart');
     var SausageAdded = document.getElementById('SausageAdded');
+
+    if (localStorage.length != 0){
+        for (var i = localStorage.length - 1; i >= 0; i--) {
+            if (localStorage.key(i) == "Turkey"){
+                TurkeyInCart = true;
+                TurkeyToCart.style.display = "none";
+                TurkeyAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Ham"){
+                HamInCart = true;
+                HamToCart.style.display = "none";
+                HamAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Salami"){
+                SalamiInCart = true;
+                SalamiToCart.style.display = "none";
+                SalamiAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Sausage"){
+                SausageiInCart = true;
+                SausageToCart.style.display = "none";
+                SausageAdded.style.display = "block";
+            }
+        }
+    }
+
     
     
     TurkeyInc.onclick = function(){     

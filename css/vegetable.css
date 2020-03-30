@@ -4,7 +4,7 @@
     z-index: 5;
     position:absolute;
     top:285px;
-    left:25px;
+    left:100px;
     width:15px;
     height:15px;
 }
@@ -14,7 +14,7 @@
   z-index:5;
   position:absolute;
   top:285px;
-  left:100px;
+  left:25px;
   width:15px;
   height:15px;
 }
@@ -53,7 +53,7 @@
     z-index: 5;
     position:absolute;
     top:285px;
-    left:225px;
+    left:300px;
     width:15px;
     height:15px;
 }
@@ -63,7 +63,7 @@
   z-index:5;
   position:absolute;
   top:285px;
-  left:300px;
+  left:225px;
   width:15px;
   height:15px;
 }
