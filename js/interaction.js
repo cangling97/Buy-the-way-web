@@ -9,30 +9,33 @@ function showList(showCheckList,checkList){
 function enterOption(){
     if (localStorage.length == 0){
         alert("Please Add Something to Your Cart!")
-    }else if(localStorage.length == 2){
-        window.location = "option1.html";
-    }else if(localStorage.length == 3){
-        window.location = "option2.html";
     }else{
-        window.location = "option.html";
+        window.location = "route.html";
     }
 }
 
 function emptyList(){
     localStorage.clear();
-    console.log(1);
     window.location = "index.html";
 }
 
 function toSubmit(){
     var x = document.getElementById("SearchBox").value;
-    x = x.toLowerCase();
-    if (x == "turkey"){
-        document.newForm.action = "turkey.html";
-    }else if(x == "cookie"){
-        document.newForm.action = "cookie.html";
+    if (x.length == 0){
+        alert("Please Input the Search Box")
     }else{
-        alert("Nothing Found");
+        var term;
+        for (var i = localStorage.length - 1; i >= 0; i--) {
+            if (localStorage.getItem(localStorage.key(i)) == "b"){
+                term = localStorage.key(i);
+                break;
+            }
+        }
+        localStorage.removeItem(term);
+        x = x.toLowerCase();
+        let search = x.concat("!");
+        localStorage.setItem(search,"b");
+        document.newForm.action = "search.html";
     }
 }
 
@@ -116,14 +119,36 @@ function display(localStorage,contentList,getListId){
    // let a = 0;
    if (localStorage.length != 0){
     for (var i = localStorage.length - 1; i >= 0; i--) {
+        if (localStorage.getItem(localStorage.key(i)) == "b"){
+            continue;
+        }
         if (localStorage.key(i) == "Turkey"){
             space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
         }
         if (localStorage.key(i) == "Chip"){
             space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
+        }if (localStorage.key(i) == "Cookie"){
+            space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
         }
         if (localStorage.key(i) == "Milk"){
             space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
+        }if (localStorage.key(i) == "Screwdriver"){
+            space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
+        }
+        if (localStorage.key(i) == "Cattree"){
+            space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
+        }
+        if (localStorage.key(i) == "Dogfood"){
+            space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;"
+        }
+        if (localStorage.key(i) == "Catfood"){
+            space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;"
+        }
+        if (localStorage.key(i) == "Screw"){
+             space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
+        }
+        if (localStorage.key(i) == "Hammer"){
+            space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
         }
         if (localStorage.key(i) == "Soda"){
             space = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
@@ -164,7 +189,6 @@ function display(localStorage,contentList,getListId){
         data = localStorage.getItem(localStorage.key(i));
         contentList[i].innerHTML = localStorage.key(i) + space + data;
         //quanList[i].innerHTML = localStorage.key(i);
-        console.log(i);
         getListId[i].style.display = "block";
         //a++;
     }
@@ -197,7 +221,6 @@ window.addEventListener('load', function(){
     
     var contentList = createContentList();
     var getListId = createIdList();
-    var quanList = createContentList();
     if (localStorage.getItem("Deleting") != null) {
         localStorage.removeItem("Deleting");
         display(localStorage,contentList,getListId);

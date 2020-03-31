@@ -47,7 +47,7 @@ body {
 }
 
 #form{
-    position:fixed;
+    position:absolute;
     left:100px;
 }
 
@@ -69,22 +69,17 @@ body {
   }
 
   #myList{
-      border-left: 2px solid black;
-      border-top: 2px solid black;
+      background-image: url("img/mylist.jpg");
       position:absolute;
       bottom:0px;
       right:0px;
-      height:100px;
+      height:20px;
       width:100%;
   }
 
-  .list{
-      margin-top:50px;
-      margin-left:150px;
-  }
 
  #checkList{
-      position:absolute;
+      position:fixed;
       z-index:10;
       right:0px;
       bottom:0px;

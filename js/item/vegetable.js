@@ -16,7 +16,26 @@ window.addEventListener('load', function(){
     var CucumberQuantity = document.getElementById('quantityCucumber');
     var CucumberToCart = document.getElementById('addCucumberToCart');
     var CucumberAdded = document.getElementById('CucumberAdded');
+    var count = 0;
     
+    if (localStorage.length != 0){
+        for (var i = localStorage.length - 1; i >= 0; i--) {
+            if (localStorage.key(i) == "Cucumber"){
+                CucumberInCart = true;
+                CucumberToCart.style.display = "none";
+                CucumberAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Broccoli"){
+                BroccoliInCart = true;
+                BroccoliToCart.style.display = "none";
+                BroccoliAdded.style.display = "block";
+            }
+            if (localStorage.getItem(localStorage.key(i)) != "b"){
+                count++;
+            }
+        }
+    }
+
     
     BroccoliInc.onclick = function(){     
         if (!BroccoliInCart){
@@ -39,10 +58,15 @@ window.addEventListener('load', function(){
     BroccoliToCart.onclick = function(){
         //alert(Broccoli + " Broccoli(s) added to cart");
         //add to list
-        BroccoliToCart.style.display = "none";
-        BroccoliAdded.style.display = "block";
-        BroccoliInCart=true;
-        localStorage.setItem("Broccoli",Broccoli.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            BroccoliToCart.style.display = "none";
+            BroccoliAdded.style.display = "block";
+            BroccoliInCart=true;
+            localStorage.setItem("Broccoli",Broccoli.toString());
+            count++;
+        }
     }
 
 
@@ -67,10 +91,15 @@ window.addEventListener('load', function(){
     CucumberToCart.onclick = function(){
         //alert(Broccoli + " Broccoli(s) added to cart");
         //add to list
-        CucumberToCart.style.display = "none";
-        CucumberAdded.style.display = "block";
-        CucumberInCart=true;
-        localStorage.setItem("Cucumber",Cucumber.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            CucumberToCart.style.display = "none";
+            CucumberAdded.style.display = "block";
+            CucumberInCart=true;
+            localStorage.setItem("Cucumber",Cucumber.toString());
+            count++;
+        }
     }
     
   });

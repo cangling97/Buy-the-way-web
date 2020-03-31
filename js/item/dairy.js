@@ -16,6 +16,7 @@ window.addEventListener('load', function(){
     var MilkQuantity = document.getElementById('quantityMilk');
     var MilkToCart = document.getElementById('addMilkToCart');
     var MilkAdded = document.getElementById('MilkAdded');
+    var count = 0;
     
     if (localStorage.length != 0){
         for (var i = localStorage.length - 1; i >= 0; i--) {
@@ -28,6 +29,9 @@ window.addEventListener('load', function(){
                 MilkInCart = true;
                 MilkToCart.style.display = "none";
                 MilkAdded.style.display = "block";
+            }
+            if (localStorage.getItem(localStorage.key(i)) != "b"){
+                count++;
             }
         }
     }
@@ -53,10 +57,15 @@ window.addEventListener('load', function(){
     CheeseToCart.onclick = function(){
         //alert(Cheese + " Cheese(s) added to cart");
         //add to list
-        CheeseToCart.style.display = "none";
-        CheeseAdded.style.display = "block";
-        CheeseInCart=true;
-        localStorage.setItem("Cheese",Cheese.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            CheeseToCart.style.display = "none";
+            CheeseAdded.style.display = "block";
+            CheeseInCart=true;
+            localStorage.setItem("Cheese",Cheese.toString());
+            count++;
+        }
     }
 
 
@@ -81,10 +90,15 @@ window.addEventListener('load', function(){
     MilkToCart.onclick = function(){
         //alert(Cheese + " Cheese(s) added to cart");
         //add to list
-        MilkToCart.style.display = "none";
-        MilkAdded.style.display = "block";
-        MilkInCart=true;
-        localStorage.setItem("Milk",Milk.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            MilkToCart.style.display = "none";
+            MilkAdded.style.display = "block";
+            MilkInCart=true;
+            localStorage.setItem("Milk",Milk.toString());
+            count++;
+        }
     }
     
   });

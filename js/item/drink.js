@@ -16,7 +16,25 @@ window.addEventListener('load', function(){
     var sodaQuantity = document.getElementById('quantitySoda');
     var sodaToCart = document.getElementById('addSodaToCart');
     var sodaAdded = document.getElementById('sodaAdded');
+    var count = 0;
     
+    if (localStorage.length != 0){
+        for (var i = localStorage.length - 1; i >= 0; i--) {
+            if (localStorage.key(i) == "Juice"){
+                juiceInCart = true;
+                juiceToCart.style.display = "none";
+                juiceAdded.style.display = "block";
+            }
+            if (localStorage.key(i) == "Soda"){
+                sodaInCart = true;
+                sodaToCart.style.display = "none";
+                sodaAdded.style.display = "block";
+            }
+            if (localStorage.getItem(localStorage.key(i)) != "b"){
+                count++;
+            }
+        }
+    }
     
     juiceInc.onclick = function(){     
         if (!juiceInCart){
@@ -39,10 +57,15 @@ window.addEventListener('load', function(){
     juiceToCart.onclick = function(){
         //alert(juice + " juice(s) added to cart");
         //add to list
-        juiceToCart.style.display = "none";
-        juiceAdded.style.display = "block";
-        juiceInCart = true;
-        localStorage.setItem("Juice",juice.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            juiceToCart.style.display = "none";
+            juiceAdded.style.display = "block";
+            juiceInCart = true;
+            localStorage.setItem("Juice",juice.toString());
+            count++;
+        }
     }
 
 
@@ -67,10 +90,16 @@ window.addEventListener('load', function(){
     sodaToCart.onclick = function(){
         //alert(juice + " juice(s) added to cart");
         //add to list
-        sodaToCart.style.display = "none";
-        sodaAdded.style.display = "block";
-        sodaInCart=true;
-        localStorage.setItem("Soda",soda.toString());
+        console.log(count);
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            sodaToCart.style.display = "none";
+            sodaAdded.style.display = "block";
+            sodaInCart=true;
+            localStorage.setItem("Soda",soda.toString());
+            count++;
+        }
     }
     
   });

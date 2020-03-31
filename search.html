@@ -1,16 +1,18 @@
 <head>
-    <title>Buy the Way | Browse</title>
+    <title>Buy the Way | Search Result</title>
     <meta charset="utf-8"/>
     <meta name="author" content="Zilong Zhang"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/search.css"> 
     <link rel="stylesheet" href="css/IncDec.css"> 
+    <script src="js/search.js"></script>
     <script src="js/interaction.js"></script>
 </head>
 <body>
     <div>
-        <a href="index.html"><img id="leftArrow" src="img/leftArrow.jpg"></a>
-        <p>&nbsp;&nbsp;Add Items</p>
+        <a href="browse.html"><img id="leftArrow" src="img/leftArrow.jpg"></a>
+        <p>&nbsp;&nbsp;Search</p>
     </div>
 
     <div id="form">
@@ -21,20 +23,20 @@
     </div>
 
     <div class="select">
-           <a href="meat.html"><img class="category" src="img/meat.jpg"></a>
-           <a href="dairy.html"><img class="category" src="img/dairy.jpg"></a>
-           <a href="vegetable.html"><img class="category" src="img/vegetable.jpg"></a>
-           <a href="fruit.html"><img class="category" src="img/fruit.jpg"></a> 
-           <a href="snack.html"><img class="category" src="img/snack.jpg"></a>
-           <a href="drink.html"><img class="category" src="img/drink.jpg"></a> 
-           <a href="pet.html"><img class="category" src="img/pet.jpg"></a> 
-           <a href="tool.html"><img class="category" src="img/tool.jpg"></a> 
-
+        <div>
+        <img class="category" id="searchItem" src="img/broccoli.jpg">
+        <div id="add"><img class="fill" src="img/plusSign.jpg"></div>
+        <p id="quantity">1</p>
+        <div id="minus"><img class="fill" src="img/minusSign.jpg"></div>
+        <img id="addToCart" src="img/addToCart.jpg">
+        <img id="Added" src="img/added.jpg">
+        </div>
     </div>
 
     <div id="myList">
+        <h1 class="list">My List</h1>
     </div>
-
+    
     <div id="checkList">
         <img id="close" src="img/close.jpg">
         <h1>&nbsp;&nbsp;My List</h1>
@@ -54,5 +56,5 @@
         <button id="GoWith" type="button" onclick="enterOption()">Go With My List</button>
     </div>
         
-
-</body>
+    
+    </body> 

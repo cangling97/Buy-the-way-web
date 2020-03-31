@@ -21,6 +21,7 @@ window.addEventListener('load', function(){
     var GrapeQuantity = document.getElementById('quantityGrape');
     var GrapeToCart = document.getElementById('addGrapeToCart');
     var GrapeAdded = document.getElementById('GrapeAdded');
+    var count = 0;
 
     if (localStorage.length != 0){
         for (var i = localStorage.length - 1; i >= 0; i--) {
@@ -38,6 +39,9 @@ window.addEventListener('load', function(){
                 AppleInCart = true;
                 AppleToCart.style.display = "none";
                 AppleAdded.style.display = "block";
+            }
+            if (localStorage.getItem(localStorage.key(i)) != "b"){
+                count++;
             }
         }
     }
@@ -64,10 +68,15 @@ window.addEventListener('load', function(){
     AppleToCart.onclick = function(){
         //alert(Apple + " Apple(s) added to cart");
         //add to list
-        AppleToCart.style.display = "none";
-        AppleAdded.style.display = "block";
-        AppleInCart=true;
-        localStorage.setItem("Apple",Apple.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            AppleToCart.style.display = "none";
+            AppleAdded.style.display = "block";
+            AppleInCart=true;
+            localStorage.setItem("Apple",Apple.toString());
+            count++
+        }
     }
 
 
@@ -92,10 +101,15 @@ window.addEventListener('load', function(){
     BananaToCart.onclick = function(){
         //alert(Apple + " Apple(s) added to cart");
         //add to list
-        BananaToCart.style.display = "none";
-        BananaAdded.style.display = "block";
-        BananaInCart=true;
-        localStorage.setItem("Banana",Banana.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            BananaToCart.style.display = "none";
+            BananaAdded.style.display = "block";
+            BananaInCart=true;
+            localStorage.setItem("Banana",Banana.toString());
+            count++;
+        }
     }
 
     GrapeInc.onclick = function(){     
@@ -119,10 +133,15 @@ window.addEventListener('load', function(){
     GrapeToCart.onclick = function(){
         //alert(Apple + " Apple(s) added to cart");
         //add to list
-        GrapeToCart.style.display = "none";
-        GrapeAdded.style.display = "block";
-        GrapeInCart=true;
-        localStorage.setItem("Grape",Grape.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            GrapeToCart.style.display = "none";
+            GrapeAdded.style.display = "block";
+            GrapeInCart=true;
+            localStorage.setItem("Grape",Grape.toString());
+            count++;
+        }
     }
     
   });

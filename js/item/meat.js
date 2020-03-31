@@ -28,6 +28,7 @@ window.addEventListener('load', function(){
     var SausageQuantity = document.getElementById('quantitySausage');
     var SausageToCart = document.getElementById('addSausageToCart');
     var SausageAdded = document.getElementById('SausageAdded');
+    var count = 0;
 
     if (localStorage.length != 0){
         for (var i = localStorage.length - 1; i >= 0; i--) {
@@ -50,6 +51,9 @@ window.addEventListener('load', function(){
                 SausageiInCart = true;
                 SausageToCart.style.display = "none";
                 SausageAdded.style.display = "block";
+            }
+            if (localStorage.getItem(localStorage.key(i)) != "b"){
+                count++;
             }
         }
     }
@@ -77,10 +81,15 @@ window.addEventListener('load', function(){
     TurkeyToCart.onclick = function(){
         //alert(Turkey + " Turkey(s) added to cart");
         //add to list
-        TurkeyToCart.style.display = "none";
-        TurkeyAdded.style.display = "block";
-        TurkeyInCart=true;
-        localStorage.setItem("Turkey",Turkey.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            TurkeyToCart.style.display = "none";
+            TurkeyAdded.style.display = "block";
+            TurkeyInCart=true;
+            localStorage.setItem("Turkey",Turkey.toString());
+            count++;
+        }
     }
 
 
@@ -105,10 +114,15 @@ window.addEventListener('load', function(){
     SausageToCart.onclick = function(){
         //alert(Turkey + " Turkey(s) added to cart");
         //add to list
-        SausageToCart.style.display = "none";
-        SausageAdded.style.display = "block";
-        SausageInCart=true;
-        localStorage.setItem("Sausage",Sausage.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            SausageToCart.style.display = "none";
+            SausageAdded.style.display = "block";
+            SausageInCart=true;
+            localStorage.setItem("Sausage",Sausage.toString());
+            count++;
+        }
     }
     
     
@@ -133,10 +147,15 @@ window.addEventListener('load', function(){
     SalamiToCart.onclick = function(){
         //alert(Salami + " Salami(s) added to cart");
         //add to list
-        SalamiToCart.style.display = "none";
-        SalamiAdded.style.display = "block";
-        SalamiInCart=true;
-        localStorage.setItem("Salami",Salami.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            SalamiToCart.style.display = "none";
+            SalamiAdded.style.display = "block";
+            SalamiInCart=true;
+            localStorage.setItem("Salami",Salami.toString());
+            count++;
+        }
     }
 
 
@@ -161,10 +180,15 @@ window.addEventListener('load', function(){
     HamToCart.onclick = function(){
         //alert(Salami + " Salami(s) added to cart");
         //add to list
-        HamToCart.style.display = "none";
-        HamAdded.style.display = "block";
-        HamInCart=true;
-        localStorage.setItem("Ham",Ham.toString());
+        if (count >= 10){
+            alert("A Maximum of 10 Items Can be Added Each Time");
+        }else{
+            HamToCart.style.display = "none";
+            HamAdded.style.display = "block";
+            HamInCart=true;
+            localStorage.setItem("Ham",Ham.toString());
+            count++;
+        }
     }
     
   });
