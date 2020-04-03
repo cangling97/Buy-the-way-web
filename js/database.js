@@ -224,14 +224,20 @@ window.addEventListener('load', function(){
         var shopName = "";
         var cloest = "";
         var cheapest = "";
+        var recompara = "";
+        var op1para = "";
+        var op2para = "";
         for (var i = 0; i < shopList.length; i++){
             shopName += "&nbsp->&nbsp" + shopList[i];
+            recompara = shopList.join();
         }
         for (var i = 0; i < cloestShop.length; i++){
             cloest += "&nbsp->&nbsp" + cloestShop[i];
+            op1para = cloestShop.join();
         }
         for (var i = 0; i < cheapestShop.length; i++){
             cheapest += "&nbsp->&nbsp" + cheapestShop[i];
+            op2para = cheapestShop.join();
         }
         if (shopName == cloest){
             op1Shop.style.display = "none";
@@ -247,12 +253,15 @@ window.addEventListener('load', function(){
         recomShop.innerHTML = shopName;
         op1Shop.innerHTML = cloest;
         op2Shop.innerHTML = cheapest;
+        document.getElementById("recommap").href='map.html?route='+ recompara;
+        document.getElementById("op1map").href='map.html?route='+ op1para;
+        document.getElementById("op2map").href='map.html?route='+ op2para;
         recomInfo.innerHTML = "Est.&nbsp$" + parseInt(totalPrice,10) + "&nbspand&nbsp" + totalDistance +"m";
         op1Info.innerHTML = "Est.&nbsp$" + parseInt(clPrice,10) + "&nbspand&nbsp" + clDistance +"m";
         op2Info.innerHTML = "Est.&nbsp$" + parseInt(chPrice,10) + "&nbspand&nbsp" + chDistance +"m";
     }
     click.click();
-    localStorage.clear();
+    //localStorage.clear();
     
 });
 
