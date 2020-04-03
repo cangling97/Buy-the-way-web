@@ -27,16 +27,25 @@ window.addEventListener('load', function(){
         for (var i = localStorage.length - 1; i >= 0; i--) {
             if (localStorage.key(i) == "Grape"){
                 GrapeInCart = true;
+                GrapeQuantity.style.display = "none";
+                GrapeInc.style.display = "none";
+                GrapeDec.style.display = "none";
                 GrapeToCart.style.display = "none";
                 GrapeAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Banana"){
                 BananaInCart = true;
+                BananaQuantity.style.display = "none";
+                BananaInc.style.display = "none";
+                BananaDec.style.display = "none";
                 BananaToCart.style.display = "none";
                 BananaAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Apple"){
                 AppleInCart = true;
+                AppleQuantity.style.display = "none";
+                AppleInc.style.display = "none";
+                AppleDec.style.display = "none";
                 AppleToCart.style.display = "none";
                 AppleAdded.style.display = "block";
             }
@@ -71,9 +80,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            AppleInCart = true;
+            AppleQuantity.style.display = "none";
+            AppleInc.style.display = "none";
+            AppleDec.style.display = "none";
             AppleToCart.style.display = "none";
             AppleAdded.style.display = "block";
-            AppleInCart=true;
             localStorage.setItem("Apple",Apple.toString());
             count++
         }
@@ -104,9 +116,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            BananaInCart = true;
+            BananaQuantity.style.display = "none";
+            BananaInc.style.display = "none";
+            BananaDec.style.display = "none";
             BananaToCart.style.display = "none";
             BananaAdded.style.display = "block";
-            BananaInCart=true;
             localStorage.setItem("Banana",Banana.toString());
             count++;
         }
@@ -136,9 +151,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            GrapeInCart = true;
+            GrapeQuantity.style.display = "none";
+            GrapeInc.style.display = "none";
+            GrapeDec.style.display = "none";
             GrapeToCart.style.display = "none";
             GrapeAdded.style.display = "block";
-            GrapeInCart=true;
             localStorage.setItem("Grape",Grape.toString());
             count++;
         }

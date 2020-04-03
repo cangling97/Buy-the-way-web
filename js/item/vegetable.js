@@ -22,12 +22,18 @@ window.addEventListener('load', function(){
         for (var i = localStorage.length - 1; i >= 0; i--) {
             if (localStorage.key(i) == "Cucumber"){
                 CucumberInCart = true;
+                CucumberQuantity.style.display = "none";
+                CucumberInc.style.display = "none";
+                CucumberDec.style.display = "none";
                 CucumberToCart.style.display = "none";
                 CucumberAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Broccoli"){
                 BroccoliInCart = true;
                 BroccoliToCart.style.display = "none";
+                BroccoliQuantity.style.display = "none";
+                BroccoliInc.style.display = "none";
+                BroccoliDec.style.display = "none";
                 BroccoliAdded.style.display = "block";
             }
             if (localStorage.getItem(localStorage.key(i)) != "b"){
@@ -62,7 +68,10 @@ window.addEventListener('load', function(){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
             BroccoliToCart.style.display = "none";
-            BroccoliAdded.style.display = "block";
+                BroccoliQuantity.style.display = "none";
+                BroccoliInc.style.display = "none";
+                BroccoliDec.style.display = "none";
+                BroccoliAdded.style.display = "block";
             BroccoliInCart=true;
             localStorage.setItem("Broccoli",Broccoli.toString());
             count++;
@@ -94,8 +103,11 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
-            CucumberToCart.style.display = "none";
-            CucumberAdded.style.display = "block";
+            CucumberQuantity.style.display = "none";
+                CucumberInc.style.display = "none";
+                CucumberDec.style.display = "none";
+                CucumberToCart.style.display = "none";
+                CucumberAdded.style.display = "block";
             CucumberInCart=true;
             localStorage.setItem("Cucumber",Cucumber.toString());
             count++;

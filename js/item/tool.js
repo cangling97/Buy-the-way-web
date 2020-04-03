@@ -28,18 +28,27 @@ window.addEventListener('load', function(){
     
     if (localStorage.length != 0){
         for (var i = localStorage.length - 1; i >= 0; i--) {
-            if (localStorage.key(i) == "screw"){
+            if (localStorage.key(i) == "Screw"){
                 screwInCart = true;
+                screwQuantity.style.display = "none";
+                screwInc.style.display = "none";
+                screwDec.style.display = "none";
                 screwToCart.style.display = "none";
                 screwAdded.style.display = "block";
             }
-            if (localStorage.key(i) == "hammer"){
+            if (localStorage.key(i) == "Hammer"){
                 hammerInCart = true;
+                hammerQuantity.style.display = "none";
+                hammerInc.style.display = "none";
+                hammerDec.style.display = "none";
                 hammerToCart.style.display = "none";
                 hammerAdded.style.display = "block";
             }
-            if (localStorage.key(i) == "screwdriver"){
+            if (localStorage.key(i) == "Screwdriver"){
                 screwdriverInCart = true;
+                screwdriverQuantity.style.display = "none";
+                screwdriverInc.style.display = "none";
+                screwdriverDec.style.display = "none";
                 screwdriverToCart.style.display = "none";
                 screwdriverAdded.style.display = "block";
             }
@@ -73,9 +82,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
-            screwToCart.style.display = "none";
-            screwAdded.style.display = "block";
-            screwInCart=true;
+            screwInCart = true;
+                screwQuantity.style.display = "none";
+                screwInc.style.display = "none";
+                screwDec.style.display = "none";
+                screwToCart.style.display = "none";
+                screwAdded.style.display = "block";
             localStorage.setItem("Screw",screw.toString());
             count++;
         }
@@ -106,9 +118,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
-            screwdriverToCart.style.display = "none";
-            screwdriverAdded.style.display = "block";
-            screwdriverInCart=true;
+            screwdriverInCart = true;
+                screwdriverQuantity.style.display = "none";
+                screwdriverInc.style.display = "none";
+                screwdriverDec.style.display = "none";
+                screwdriverToCart.style.display = "none";
+                screwdriverAdded.style.display = "block";
             localStorage.setItem("Screwdriver",screwdriver.toString());
             count++;
         }
@@ -138,9 +153,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
-            hammerToCart.style.display = "none";
-            hammerAdded.style.display = "block";
-            hammerInCart=true;
+            hammerInCart = true;
+                hammerQuantity.style.display = "none";
+                hammerInc.style.display = "none";
+                hammerDec.style.display = "none";
+                hammerToCart.style.display = "none";
+                hammerAdded.style.display = "block";
             localStorage.setItem("Hammer",hammer.toString());
             count++;
         }

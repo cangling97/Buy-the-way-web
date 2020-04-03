@@ -1,288 +1,288 @@
 #plus1{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:143px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
 
   #minus1{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:143px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
 #delete1{
     z-index: 5;
     position:absolute;
     top:143px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }
 
   #plus2{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:183px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
 
   #minus2{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:183px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
   #delete2{
     z-index: 5;
     position:absolute;
     top:183px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }
   #plus3{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:223px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
 
   #minus3{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:223px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
   #delete3{
     z-index: 5;
     position:absolute;
     top:223px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }
 
   #plus4{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:263px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
   #delete4{
     z-index: 5;
     position:absolute;
     top:263px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }
 
   #minus4{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:263px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
 
   #plus5{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:303px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
 
   #minus5{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:303px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
   #delete5{
     z-index: 5;
     position:absolute;
     top:303px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }
 
   #plus6{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:343px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
 
   #minus6{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:343px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
   #delete6{
     z-index: 5;
     position:absolute;
     top:343px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }
 
   #plus7{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:383px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
 
   #minus7{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:383px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
   #delete7{
     z-index: 5;
     position:absolute;
     top:383px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }
 
   #plus8{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:423px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
 
   #minus8{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:423px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
   #delete8{
     z-index: 5;
     position:absolute;
     top:423px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }
 
   #plus9{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:463px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
 
   #minus9{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:463px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
   #delete9{
     z-index: 5;
     position:absolute;
     top:463px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }
 
   #plus10{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:503px;
     left:200px;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
   }
 
   #minus10{
-    border:1px solid black;
+    
     z-index: 5;
     position:absolute;
     top:503px;
-    left:130px;
-    width:15px;
-    height:15px;
+    left:140px;
+    width:20px;
+    height:20px;
   }
 
   #delete10{
     z-index: 5;
     position:absolute;
     top:503px;
-    left:250px;
+    left:270px;
     width:15px;
-    height:15px;
+    height:20px;
 }

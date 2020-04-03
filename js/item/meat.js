@@ -34,21 +34,33 @@ window.addEventListener('load', function(){
         for (var i = localStorage.length - 1; i >= 0; i--) {
             if (localStorage.key(i) == "Turkey"){
                 TurkeyInCart = true;
+                TurkeyQuantity.style.display = "none";
+                TurkeyInc.style.display = "none";
+                TurkeyDec.style.display = "none";
                 TurkeyToCart.style.display = "none";
                 TurkeyAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Ham"){
                 HamInCart = true;
+                HamQuantity.style.display = "none";
+                HamInc.style.display = "none";
+                HamDec.style.display = "none";
                 HamToCart.style.display = "none";
                 HamAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Salami"){
                 SalamiInCart = true;
+                SalamiQuantity.style.display = "none";
+                SalamiInc.style.display = "none";
+                SalamiDec.style.display = "none";
                 SalamiToCart.style.display = "none";
                 SalamiAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Sausage"){
-                SausageiInCart = true;
+                SausageInCart = true;
+                SausageQuantity.style.display = "none";
+                SausageInc.style.display = "none";
+                SausageDec.style.display = "none";
                 SausageToCart.style.display = "none";
                 SausageAdded.style.display = "block";
             }
@@ -84,9 +96,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
-            TurkeyToCart.style.display = "none";
-            TurkeyAdded.style.display = "block";
-            TurkeyInCart=true;
+            TurkeyInCart = true;
+                TurkeyQuantity.style.display = "none";
+                TurkeyInc.style.display = "none";
+                TurkeyDec.style.display = "none";
+                TurkeyToCart.style.display = "none";
+                TurkeyAdded.style.display = "block";
             localStorage.setItem("Turkey",Turkey.toString());
             count++;
         }
@@ -117,9 +132,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            SausageInCart = true;
+            SausageQuantity.style.display = "none";
+            SausageInc.style.display = "none";
+            SausageDec.style.display = "none";
             SausageToCart.style.display = "none";
             SausageAdded.style.display = "block";
-            SausageInCart=true;
             localStorage.setItem("Sausage",Sausage.toString());
             count++;
         }
@@ -150,9 +168,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
-            SalamiToCart.style.display = "none";
-            SalamiAdded.style.display = "block";
-            SalamiInCart=true;
+            SalamiInCart = true;
+                SalamiQuantity.style.display = "none";
+                SalamiInc.style.display = "none";
+                SalamiDec.style.display = "none";
+                SalamiToCart.style.display = "none";
+                SalamiAdded.style.display = "block";
             localStorage.setItem("Salami",Salami.toString());
             count++;
         }
@@ -183,9 +204,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
-            HamToCart.style.display = "none";
-            HamAdded.style.display = "block";
-            HamInCart=true;
+            HamInCart = true;
+                HamQuantity.style.display = "none";
+                HamInc.style.display = "none";
+                HamDec.style.display = "none";
+                HamToCart.style.display = "none";
+                HamAdded.style.display = "block";
             localStorage.setItem("Ham",Ham.toString());
             count++;
         }

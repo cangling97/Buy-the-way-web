@@ -22,11 +22,17 @@ window.addEventListener('load', function(){
         for (var i = localStorage.length - 1; i >= 0; i--) {
             if (localStorage.key(i) == "Cheese"){
                 CheeseInCart = true;
+                CheeseQuantity.style.display = "none";
+                CheeseInc.style.display = "none";
+                CheeseDec.style.display = "none";
                 CheeseToCart.style.display = "none";
                 CheeseAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Milk"){
                 MilkInCart = true;
+                MilkQuantity.style.display = "none";
+                MilkInc.style.display = "none";
+                MilkDec.style.display = "none";
                 MilkToCart.style.display = "none";
                 MilkAdded.style.display = "block";
             }
@@ -60,9 +66,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            CheeseInCart = true;
+            CheeseQuantity.style.display = "none";
+            CheeseInc.style.display = "none";
+            CheeseDec.style.display = "none";
             CheeseToCart.style.display = "none";
             CheeseAdded.style.display = "block";
-            CheeseInCart=true;
             localStorage.setItem("Cheese",Cheese.toString());
             count++;
         }
@@ -93,9 +102,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            MilkInCart = true;
+            MilkQuantity.style.display = "none";
+            MilkInc.style.display = "none";
+            MilkDec.style.display = "none";
             MilkToCart.style.display = "none";
             MilkAdded.style.display = "block";
-            MilkInCart=true;
             localStorage.setItem("Milk",Milk.toString());
             count++;
         }

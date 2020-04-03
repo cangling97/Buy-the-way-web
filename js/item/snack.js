@@ -30,16 +30,25 @@ window.addEventListener('load', function(){
         for (var i = localStorage.length - 1; i >= 0; i--) {
             if (localStorage.key(i) == "Cracker"){
                 CrackerInCart = true;
+                CrackerQuantity.style.display = "none";
+                CrackerInc.style.display = "none";
+                CrackerDec.style.display = "none";
                 CrackerToCart.style.display = "none";
                 CrackerAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Cookie"){
                 CookieInCart = true;
+                CookieQuantity.style.display = "none";
+                CookieInc.style.display = "none";
+                CookieDec.style.display = "none";
                 CookieToCart.style.display = "none";
                 CookieAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Chip"){
                 ChipInCart = true;
+                ChipQuantity.style.display = "none";
+                ChipInc.style.display = "none";
+                ChipDec.style.display = "none";
                 ChipToCart.style.display = "none";
                 ChipAdded.style.display = "block";
             }
@@ -73,9 +82,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
-            CrackerToCart.style.display = "none";
-            CrackerAdded.style.display = "block";
-            CrackerInCart=true;
+            CrackerInCart = true;
+                CrackerQuantity.style.display = "none";
+                CrackerInc.style.display = "none";
+                CrackerDec.style.display = "none";
+                CrackerToCart.style.display = "none";
+                CrackerAdded.style.display = "block";
             localStorage.setItem("Cracker",Cracker.toString());
             count++;
         }
@@ -106,9 +118,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            ChipInCart = true;
+            ChipQuantity.style.display = "none";
+            ChipInc.style.display = "none";
+            ChipDec.style.display = "none";
             ChipToCart.style.display = "none";
             ChipAdded.style.display = "block";
-            ChipInCart=true;
             localStorage.setItem("Chip",Chip.toString());
             count++;
         }
@@ -138,9 +153,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            CookieInCart = true;
+            CookieQuantity.style.display = "none";
+            CookieInc.style.display = "none";
+            CookieDec.style.display = "none";
             CookieToCart.style.display = "none";
             CookieAdded.style.display = "block";
-            CookieInCart=true;
             localStorage.setItem("Cookie",Cookie.toString());
             count++;
         }

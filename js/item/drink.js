@@ -22,11 +22,17 @@ window.addEventListener('load', function(){
         for (var i = localStorage.length - 1; i >= 0; i--) {
             if (localStorage.key(i) == "Juice"){
                 juiceInCart = true;
+                juiceQuantity.style.display = "none";
+                juiceInc.style.display = "none";
+                juiceDec.style.display = "none";
                 juiceToCart.style.display = "none";
                 juiceAdded.style.display = "block";
             }
             if (localStorage.key(i) == "Soda"){
                 sodaInCart = true;
+                sodaQuantity.style.display = "none";
+                sodaInc.style.display = "none";
+                sodaDec.style.display = "none";
                 sodaToCart.style.display = "none";
                 sodaAdded.style.display = "block";
             }
@@ -60,9 +66,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            juiceInCart = true;
+            juiceQuantity.style.display = "none";
+            juiceInc.style.display = "none";
+            juiceDec.style.display = "none";
             juiceToCart.style.display = "none";
             juiceAdded.style.display = "block";
-            juiceInCart = true;
             localStorage.setItem("Juice",juice.toString());
             count++;
         }
@@ -94,9 +103,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            sodaInCart = true;
+            sodaQuantity.style.display = "none";
+            sodaInc.style.display = "none";
+            sodaDec.style.display = "none";
             sodaToCart.style.display = "none";
             sodaAdded.style.display = "block";
-            sodaInCart=true;
             localStorage.setItem("Soda",soda.toString());
             count++;
         }

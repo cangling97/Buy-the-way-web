@@ -66,9 +66,9 @@ function createData(){
     data["chip"] = [chip1,chip2,chip3];
     data["juice"] = [juice1,juice2,juice3];
     data["broccoli"] = [broccoli1,broccoli2];
-    data["catFood"] = [catFood1,catFood2];
-    data["dogFood"] = [dogFood1,dogFood2,dogFood3];
-    data["catTree"] = [catTree1,catTree2,catTree3];
+    data["catfood"] = [catFood1,catFood2];
+    data["dogfood"] = [dogFood1,dogFood2,dogFood3];
+    data["cattree"] = [catTree1,catTree2,catTree3];
     data["hammer"] = [hammer1,hammer2,hammer3];
     data["screw"] = [screw1, screw2];
     data["screwdriver"] = [screwdriver1,screwdriver2,screwdriver3];

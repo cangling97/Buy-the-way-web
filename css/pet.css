@@ -1,18 +1,16 @@
 #adddogfood{
-    border:1px solid black;
     z-index: 5;
     position:absolute;
-    top:285px;
+    top:227px;
     left:100px;
     width:15px;
     height:15px;
 }
 
 #minusdogfood{
-    border:1px solid black;
   z-index:5;
   position:absolute;
-  top:285px;
+  top:227px;
   left:25px;
   width:15px;
   height:15px;
@@ -20,97 +18,93 @@
 
 #quantitydogfood{
     margin:0px;
-    font-size:15;
+    font-size:20;
   z-index:5;
   position:absolute;
-  top:285px;
-  left:65px;
+  top:227px;
+  left:72px;
 }
 
 #adddogfoodToCart{
   z-index:5;
   position:absolute;
-  top:280px;
-  left:140px;
-  width:25px;
-  height:25px;
+  top:200px;
+  left:130px;
+  width:50px;
+  height:50px;
   display:block;
 }
 
 #dogfoodAdded{
     z-index:6;
   position:absolute;
-  top:280px;
-  left:140px;
-  width:25px;
-  height:25px;
+  top:200px;
+  left:130px;
+  width:35px;
+  height:35px;
   display:none;
 }
 
 #addcatfood{
-    border:1px solid black;
     z-index: 5;
     position:absolute;
-    top:285px;
-    left:300px;
+    top:227px;
+    left:285px;
     width:15px;
     height:15px;
 }
 
 #minuscatfood{
-    border:1px solid black;
   z-index:5;
   position:absolute;
-  top:285px;
-  left:225px;
+  top:227px;
+  left:210px;
   width:15px;
   height:15px;
 }
 
 #quantitycatfood{
     margin:0px;
-    font-size:15;
+    font-size:20;
   z-index:5;
   position:absolute;
-  top:285px;
-  left:265px;
+  top:227px;
+  left:257px;
 }
 
 #addcatfoodToCart{
   z-index:5;
   position:absolute;
-  top:280px;
-  left:340px;
-  width:25px;
-  height:25px;
+  top:200px;
+  left:305px;
+  width:50px;
+  height:50px;
   display:block;
 }
 
 #catfoodAdded{
     z-index:6;
   position:absolute;
-  top:280px;
-  left:340px;
-  width:25px;
-  height:25px;
+  top:200px;
+  left:305px;
+  width:35px;
+  height:35px;
   display:none;
 }
 
 #addcattree{
-    border:1px solid black;
     z-index: 5;
     position:absolute;
-    top:430px;
+    top:375px;
     left:100px;
     width:15px;
     height:15px;
 }
 
 #minuscattree{
-    border:1px solid black;
   z-index:5;
   position:absolute;
-  top:430px;
+  top:375px;
   left:25px;
   width:15px;
   height:15px;
@@ -118,35 +112,54 @@
 
 #quantitycattree{
     margin:0px;
-    font-size:15;
+    font-size:20;
   z-index:5;
   position:absolute;
-  top:430px;
-  left:65px;
+  top:375px;
+  left:72px;
 }
 
 #addcattreeToCart{
   z-index:5;
   position:absolute;
-  top:430px;
-  left:140px;
-  width:25px;
-  height:25px;
+  top:345px;
+  left:127px;
+  width:50px;
+  height:50px;
   display:block;
 }
 
 #cattreeAdded{
     z-index:6;
   position:absolute;
-  top:430px;
-  left:140px;
-  width:25px;
-  height:25px;
+  top:345px;
+  left:127px;
+  width:35px;
+  height:35px;
   display:none;
 }
 
 .fill{
-    width:15px;
-    height:15px;
+    width:30px;
+    height:30px;
     z-index:5;
+}
+
+
+#dogfood{
+  position:absolute;
+  top:140px;
+  left:51px;
+}
+
+#catfood{
+  position:absolute;
+  top:140px;
+  right: 75px;
+}
+
+#cattree{
+  position:absolute;
+  top:280px;
+  left: 57px;
 }

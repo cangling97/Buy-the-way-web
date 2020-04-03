@@ -28,18 +28,27 @@ window.addEventListener('load', function(){
     
     if (localStorage.length != 0){
         for (var i = localStorage.length - 1; i >= 0; i--) {
-            if (localStorage.key(i) == "dogfood"){
+            if (localStorage.key(i) == "Dogfood"){
                 dogfoodInCart = true;
+                dogfoodQuantity.style.display = "none";
+                dogfoodInc.style.display = "none";
+                dogfoodDec.style.display = "none";
                 dogfoodToCart.style.display = "none";
                 dogfoodAdded.style.display = "block";
             }
-            if (localStorage.key(i) == "cattree"){
+            if (localStorage.key(i) == "Cattree"){
                 cattreeInCart = true;
+                cattreeQuantity.style.display = "none";
+                cattreeInc.style.display = "none";
+                cattreeDec.style.display = "none";
                 cattreeToCart.style.display = "none";
                 cattreeAdded.style.display = "block";
             }
-            if (localStorage.key(i) == "catfood"){
+            if (localStorage.key(i) == "Catfood"){
                 catfoodInCart = true;
+                catfoodQuantity.style.display = "none";
+                catfoodInc.style.display = "none";
+                catfoodDec.style.display = "none";
                 catfoodToCart.style.display = "none";
                 catfoodAdded.style.display = "block";
             }
@@ -73,9 +82,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
-            dogfoodToCart.style.display = "none";
-            dogfoodAdded.style.display = "block";
-            dogfoodInCart=true;
+            dogfoodInCart = true;
+                dogfoodQuantity.style.display = "none";
+                dogfoodInc.style.display = "none";
+                dogfoodDec.style.display = "none";
+                dogfoodToCart.style.display = "none";
+                dogfoodAdded.style.display = "block";
             localStorage.setItem("Dogfood",dogfood.toString());
             count++;
         }
@@ -106,9 +118,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            catfoodInCart = true;
+            catfoodQuantity.style.display = "none";
+            catfoodInc.style.display = "none";
+            catfoodDec.style.display = "none";
             catfoodToCart.style.display = "none";
             catfoodAdded.style.display = "block";
-            catfoodInCart=true;
             localStorage.setItem("Catfood",catfood.toString());
             count++;
         }
@@ -138,9 +153,12 @@ window.addEventListener('load', function(){
         if (count >= 10){
             alert("A Maximum of 10 Items Can be Added Each Time");
         }else{
+            cattreeInCart = true;
+            cattreeQuantity.style.display = "none";
+            cattreeInc.style.display = "none";
+            cattreeDec.style.display = "none";
             cattreeToCart.style.display = "none";
             cattreeAdded.style.display = "block";
-            cattreeInCart=true;
             localStorage.setItem("Cattree",cattree.toString());
             count++;
         }
