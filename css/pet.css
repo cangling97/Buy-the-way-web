@@ -150,16 +150,22 @@
   position:absolute;
   top:140px;
   left:51px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #catfood{
   position:absolute;
   top:140px;
   right: 75px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #cattree{
   position:absolute;
   top:280px;
   left: 57px;
+  font-weight: 900;
+  z-index:5;
 }

@@ -76,6 +76,9 @@ window.addEventListener('load', function(){
             for (var i = localStorage.length - 1; i >= 0; i--) {
                 if (localStorage.key(i) == search){
                     itemInCart = true;
+                    itemQuantity.style.display = "none";
+                    add.style.display = "none";
+                    minus.style.display = "none";
                     toCart.style.display = "none";
                     added.style.display = "block";
                 }
@@ -107,9 +110,12 @@ window.addEventListener('load', function(){
                 if (count >= 10){
                     alert("A Maximum of 10 Items Can be Added Each Time");
                 }else{
+                    itemInCart = true;
+                    itemQuantity.style.display = "none";
+                    add.style.display = "none";
+                    minus.style.display = "none";
                     toCart.style.display = "none";
                     added.style.display = "block";
-                    itemInCart = true;
                     localStorage.setItem(search,quantity.toString());
                     count++;
                 }

@@ -155,16 +155,22 @@ left:72px;
 position:absolute;
 top:140px;
 left:63px;
+font-weight: 900;
+z-index:5;
 }
 
 #screwdriver{
 position:absolute;
 top:140px;
 right: 70px;
+font-weight: 900;
+z-index:5;
 }
 
 #hammer{
 position:absolute;
 top:280px;
 left: 57px;
+font-weight: 900;
+z-index:5;
 }

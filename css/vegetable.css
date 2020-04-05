@@ -107,10 +107,14 @@
   position:absolute;
   top:140px;
   left:63px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #cucumber{
   position:absolute;
   top:140px;
   right:70px;
+  font-weight: 900;
+  z-index:5;
 }

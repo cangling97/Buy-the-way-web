@@ -45,9 +45,10 @@
         var container = document.createElement("div");
         var p = document.createElement("p");
         var a = document.createElement("a");
-        p.textContent = "Destination: " + parse[x];
+        p.textContent = "To " + parse[x] +":";
         a.className = "mapButton";
         a.textContent = "Open on Googlemap";
+        a.style.cssText = "margin-left:27%;border: rgba(52, 152, 219, 1) 2px solid; border-radius:15px;background-color:rgba(52, 152, 219, 1);text-decoration: none;color:white;font-size:15;";
         a.href = "http://maps.google.com/maps/dir/current+location/" + parse[x] + ",+Kingston";
         container.id = parse[x];
         container.appendChild(p);
@@ -58,14 +59,14 @@
       function initMap() {
         // The locations
         var markets = [
-          ['metro', 44.2323852, -76.491888],
-          ['foodBasic', 44.2334771,-76.480701],
-          ['costco', 44.2601738, -76.5603943],
-          ['globalPetFood', 44.2448608, -76.5185738],
-          ['petValu', 44.2419248, -76.5156555],
-          ['dollarama', 44.2318787, -76.485203],
-          ['canadianTire', 44.2415275, -76.5140443],
-          ['canadaComputer', 44.232621, -76.4903916]]
+          ['Metro', 44.2323852, -76.491888],
+          ['FoodBasic', 44.2334771,-76.480701],
+          ['Costco', 44.2601738, -76.5603943],
+          ['GlobalPetFood', 44.2448608, -76.5185738],
+          ['PetValu', 44.2419248, -76.5156555],
+          ['Dollarama', 44.2318787, -76.485203],
+          ['CanadianTire', 44.2415275, -76.5140443],
+          ['CanadaComputer', 44.232621, -76.4903916]]
         var kcenter = { lat: 44.241115, lng: -76.519164 };
 
         var map = new google.maps.Map(
@@ -74,28 +75,28 @@
           nav(x);
           var index;
           switch (parse[x]) {
-            case "metro":
+            case "Metro":
               index = 0;
               break;
-            case "foodBasic":
+            case "FoodBasic":
               index = 1;
               break;
-            case "costco":
+            case "Costco":
               index = 2;
               break;
-            case "globalPetFood":
+            case "GlobalPetFood":
               index = 3;
               break;
-            case "petValu":
+            case "PetValu":
               index = 4;
               break;
-            case "dollarama":
+            case "Dollarama":
               index = 5;
               break;
-            case "canadianTire":
+            case "CanadianTire":
               index = 6;
               break;
-            case "canadaComputer":
+            case "CanadaComputer":
               index = 7;
               break;
           }
@@ -109,7 +110,7 @@
         }
 
       }
-        // var marker_1 = new google.maps.Marker({ position: metro, map: map });
+        // var marker_1 = new google.maps.Marker({ position: Metro, map: map });
         // var marker2 = new google.maps.Marker({ position: fbasic, map: map });  
 
       //   marker1.addListener('click', function () {
@@ -133,7 +134,7 @@
     <div id="Location">
     </div>
   </div>
-  <button id="back" type="button" onclick="emptyList()">Back to Main Page</button>
+  <button id="back" type="button" onclick="emptyList()">Clear and Back to Main Page</button>
 </body>
 
 </html>

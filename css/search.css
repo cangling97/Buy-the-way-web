@@ -1,56 +1,61 @@
 
 
 #add{
-    border:1px solid black;
-    z-index: 5;
-    position:absolute;
-    top:285px;
-    left:100px;
-    width:15px;
-    height:15px;
+  z-index: 5;
+  position:absolute;
+  top:225px;
+  left:100px;
+  width:15px;
+  height:15px;
 }
 
 #minus{
-    border:1px solid black;
   z-index:5;
   position:absolute;
-  top:285px;
+  top:225px;
   left:25px;
   width:15px;
   height:15px;
 }
 
 #quantity{
-    margin:0px;
-    font-size:15;
-  z-index:5;
-  position:absolute;
-  top:285px;
-  left:65px;
+  margin:0px;
+  font-size:20;
+z-index:5;
+position:absolute;
+top:225px;
+left:72px;
 }
 
 #addToCart{
   z-index:5;
   position:absolute;
-  top:285px;
-  left:140px;
-  width:25px;
-  height:25px;
+  top:200px;
+  left:130px;
+  width:50px;
+  height:50px;
   display:block;
 }
 
 #Added{
-    z-index:6;
+  z-index:6;
   position:absolute;
-  top:285px;
-  left:140px;
-  width:25px;
-  height:25px;
+  top:200px;
+  left:130px;
+  width:35px;
+  height:35px;
   display:none;
 }
 
 .fill{
-    width:15px;
-    height:15px;
+    width:30px;
+    height:30px;
     z-index:5;
 }
+
+#des{
+  position:absolute;
+  top:140px;
+  left:51px;
+}
+

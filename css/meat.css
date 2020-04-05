@@ -206,22 +206,30 @@
   position:absolute;
   top:140px;
   left:63px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #ham{
   position:absolute;
   top:140px;
   right: 95px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #turkey{
   position:absolute;
   top:280px;
   left: 63px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #sausage{
   position:absolute;
   top:280px;
   right: 75px;
+  font-weight: 900;
+  z-index:5;
 }

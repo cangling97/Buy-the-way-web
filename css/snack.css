@@ -151,16 +151,22 @@
   position:absolute;
   top:140px;
   left:63px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #cookie{
   position:absolute;
   top:140px;
   right: 85px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #cracker{
   position:absolute;
   top:280px;
   left: 63px;
+  font-weight: 900;
+  z-index:5;
 }

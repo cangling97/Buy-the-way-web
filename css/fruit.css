@@ -149,16 +149,22 @@
   position:absolute;
   top:140px;
   left:63px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #banana{
   position:absolute;
   top:140px;
   right: 87px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #grape{
   position:absolute;
   top:280px;
   left: 63px;
+  font-weight: 900;
+  z-index:5;
 }

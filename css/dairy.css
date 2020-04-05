@@ -102,10 +102,14 @@
   position:absolute;
   top:140px;
   left:63px;
+  font-weight: 900;
+  z-index:5;
 }
 
 #milk{
   position:absolute;
   top:140px;
   right: 95px;
+  font-weight: 900;
+  z-index:5;
 }

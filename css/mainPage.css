@@ -18,13 +18,50 @@ body {
 
 #plus{
     position:absolute;
-    width:50px;
-    height:50px;
-    left:0px;
+    z-index: 10;
+    width:100px;
+    height:100px;
+    left:35%;
+    top:30%;
 }
 
-#mainPage{
-    border-top: 2px solid black;
+#start{
+  position:absolute;
+  left:36%;
+  top:45%;
+  color:white;
+  font-size:20;
+}
+
+#ad{
+  position:absolute;
+  left:26%;
+  top:50%;
+  color:white;
+  font-size:20;
+}
+
+#btw{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:70%;
+}
+
+#logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#mainPage {
+  margin-left:5px;
+  margin-right:10px;
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  background: #fea085;
 }
 
 #list{
