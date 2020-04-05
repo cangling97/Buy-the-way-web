@@ -45,6 +45,30 @@ function getImg(search){
     if (search == "cracker"){
         img = "img/cracker.jpg";
     }
+    if (search == "cookie"){
+        img = "img/cookie.jpg";
+    }
+    if (search == "cattree"){
+        img = "img/cattree.jpg";
+    }
+    if (search == "dogfood"){
+        img = "img/dogfood.jpg";
+    }
+    if (search == "catfood"){
+        img = "img/catfood.jpg";
+    }
+    if (search == "hammer"){
+        img = "img/hammer.jpg";
+    }
+    if (search == "screw"){
+        img = "img/screw.jpg";
+    }
+    if (search == "screwdriver"){
+        img = "img/screwdriver.jpg";
+    }
+    if (search == "grape"){
+        img = "img/grape.jpg";
+    }
     return img;
 }
 
