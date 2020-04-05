@@ -185,34 +185,6 @@ p{
     top:143px;
 }
 
-.mapButton{
-    box-shadow:inset 0px 1px 0px 0px #efdcfb;
-    background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
-    background-color:#dfbdfa;
-    border-radius:15px;
-    border: #c584f 32px solid;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:21px;
-    font-weight:bold;
-    padding:9px 41px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #9752cc;
-}
-.mapButton:hover {
-    background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
-    background-color:#bc80ea;
-}
-.mapButton:active {
-    position:relative;
-    top:1px;
-}
-.Location{
-    text-align: center;
-}
-
 #recommendation{
     color:white;
     background-image:url("img/recommend.svg");
@@ -223,8 +195,8 @@ p{
     color:white;
     font-size:30;
     position:absolute;
-    right:35px;
-    top:120px;
+    right:75px;
+    top:115px;
 }
 
 #recomShop{
@@ -250,8 +222,8 @@ p{
     color:white;
     font-size:30;
     position:absolute;
-    right:35px;
-    top:270px;
+    right:75px;
+    top:250px;
 }
 
 #op2{
@@ -270,8 +242,8 @@ p{
     color:white;
     font-size:30;
     position:absolute;
-    right:35px;
-    top:365px;
+    right:75px;
+    top:337px;
 }
 
 
@@ -311,20 +283,6 @@ p{
     right:30px;
     top:490px;
 }
-
-.option{
-    text-align: center;
-        border: 2px solid black;
-}
-
-
-.others{
-        text-align: center;
-    }
-    .option{
-        text-align:left;
-        border: 5px double rgba(63,164,111,0.66);
-    }
 
 
 .category{
@@ -400,41 +358,41 @@ p{
 
 #recomInfo{
     position:absolute;
-    top:145px;
-    right:100px;
+    top:133px;
+    right:140px;
     font-size:14;
     opacity:0.6;
 }
 
 #op1Info{
     position:absolute;
-    top:295px;
-    right:100px;
+    top:270px;
+    right:140px;
     font-size:14;
     opacity:0.6;
 }
 
 #op2Info{
     position:absolute;
-    top:385px;
-    right:100px;
+    top:355px;
+    right:140px;
     font-size:14;
     opacity:0.6;
 }
 
 #clo{
     position:absolute;
-    width:30px;
-    height:25px;
-    top:232px;;
+    width:25px;
+    height:20px;
+    top:210px;;
     left:10px;
   
   }
   
   #che{
     position:absolute;
-    top:327px;
+    top:300px;
     left:10px;
-    width:25px;
-    height:25px;
+    width:20px;
+    height:20px;
   }

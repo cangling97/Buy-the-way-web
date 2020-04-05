@@ -114,10 +114,14 @@ function increase(index,contentList,getListId){
 function decrease(index,contentList,getListId){
     let key = localStorage.key(index);
     let data = localStorage.getItem(key);
-    data--;
-    localStorage.removeItem(key);
-    localStorage.setItem(key,data.toString());
-    display(localStorage,contentList,getListId);
+    if (data == 1){
+        alert("Cannot Decrease Anymore, Please Consider Delete");
+    }else{
+        data--;
+        localStorage.removeItem(key);
+        localStorage.setItem(key,data.toString());
+        display(localStorage,contentList,getListId);
+    }
 }
 
 
